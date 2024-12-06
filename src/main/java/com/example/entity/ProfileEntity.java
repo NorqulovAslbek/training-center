@@ -21,7 +21,7 @@ public class ProfileEntity extends BaseEntity {
     private String password;
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private ProfileStatus status;
+    private ProfileStatus status = ProfileStatus.ACTIVE;
     @Enumerated(EnumType.STRING)
     @Column(name = "role")
     private ProfileRole role;

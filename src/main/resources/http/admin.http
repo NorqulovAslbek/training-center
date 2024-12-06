@@ -1,36 +1,44 @@
-#POST localhost:8080/api/v1/admin/create
-#Content-Type: application/json
-#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NDk2NDksInBob25lIjoiKzk5ODk5MTIyMTIwMiIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MjM2MzYwNDksImlzcyI6IllvdXR1YmUifQ.Vv6U5Y9Gj0luSc6d413PQzRO0e2ZDCC2wk2fX0l4elYCdzmOFhgQR6kcp9H7TVSXhxZzLhRJmodnUVFrw6_bdQ
-#
-#{
-#  "name": "Aslbek",
-#  "surname": "Norqulov",
-#  "phone": "+998991221202",
-#  "password": "12345",
-#  "role": "ROLE_USER"
-#}
+###
+POST localhost:8080/api/v1/admin/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NDk2NDksInBob25lIjoiKzk5ODk5MTIyMTIwMiIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MjM2MzYwNDksImlzcyI6IllvdXR1YmUifQ.Vv6U5Y9Gj0luSc6d413PQzRO0e2ZDCC2wk2fX0l4elYCdzmOFhgQR6kcp9H7TVSXhxZzLhRJmodnUVFrw6_bdQ
 
-#PUT localhost:8080/api/v1/admin/update/3
-#Content-Type: application/json
-#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NTI5OTIsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzIzNjM5MzkyLCJpc3MiOiJZb3V0dWJlIn0.gCWUGQovPDwpGXtDMblLOnTCxGCygrlV5yuObSw_L-c5rq9gl8RNOkJzx7jECzsRhn71e9hcgIMc16C0xFoInA
-#
-#{
-#  "password": "12322"
-#}
+{
+  "name": "Aslbek",
+  "surname": "Norqulov",
+  "phone": "+998991221202",
+  "password": "12345",
+  "role": "ROLE_USER"
+}
 
+###
+PUT localhost:8080/api/v1/admin/update/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NTI5OTIsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzIzNjM5MzkyLCJpc3MiOiJZb3V0dWJlIn0.gCWUGQovPDwpGXtDMblLOnTCxGCygrlV5yuObSw_L-c5rq9gl8RNOkJzx7jECzsRhn71e9hcgIMc16C0xFoInA
+
+{
+  "password": "12322"
+}
+
+###
 GET localhost:8080/api/v1/admin/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjQ2MTI2MDAsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzI0Njk5MDAwLCJpc3MiOiJZb3V0dWJlIn0.uvDFbmh_ZLJR8egDDiHbN8VdDmqTI2X2EI-NGXzzZfRx4fn4WNFD9ZfvBrcHMB27KFSxYFQZb2UyTHySBxWv1w
+
+###
+GET localhost:8080/api/v1/admin/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjQ2MTI2MDAsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzI0Njk5MDAwLCJpc3MiOiJZb3V0dWJlIn0.uvDFbmh_ZLJR8egDDiHbN8VdDmqTI2X2EI-NGXzzZfRx4fn4WNFD9ZfvBrcHMB27KFSxYFQZb2UyTHySBxWv1w
+
+
+###
+POST localhost:8080/api/v1/admin/filter?page=1&size=2
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM3MTYwMjgsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzIzODAyNDI4LCJpc3MiOiJZb3V0dWJlIn0.YRn_abUv6-Z8ZMXHthOuBk4M8aqvTa1ukbbtV24xxcpc9u2fRJFRlSENc_-XBi7wYBvtUmgpu5750Vt89242qw
 
-
-
-#POST localhost:8080/api/v1/admin/filter?page=1&size=2
-#Content-Type: application/json
-#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM3MTYwMjgsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzIzODAyNDI4LCJpc3MiOiJZb3V0dWJlIn0.YRn_abUv6-Z8ZMXHthOuBk4M8aqvTa1ukbbtV24xxcpc9u2fRJFRlSENc_-XBi7wYBvtUmgpu5750Vt89242qw
-#
-#{
-#  "phone": "+9989912212023"
-#}
+{
+  "phone": "+9989912212023"
+}
 
 
 

@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.example.enums.ProfileStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

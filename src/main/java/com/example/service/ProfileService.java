@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.dto.CreateProfileDTO;
 import com.example.dto.PaginationResultDTO;
 import com.example.dto.ProfileDTO;
 import com.example.dto.ProfileRequestAndResponseDTO;
@@ -28,8 +29,8 @@ public class ProfileService {
     private final ProfileRepository profileRepository;
     private final ProfileFilterRepository profileFilterRepository;
 
-    public ProfileRequestAndResponseDTO create(ProfileDTO proFileDTO) {
-        ProfileEntity entity = getProfileEntity(proFileDTO);
+    public ProfileRequestAndResponseDTO create(CreateProfileDTO createProfileDTO) {
+        ProfileEntity entity = getProfileEntity(createProfileDTO);
         ProfileEntity profileEntity = profileRepository.save(entity);
         return getToDTO(profileEntity);
     }
@@ -78,7 +79,6 @@ public class ProfileService {
 
     private ProfileRequestAndResponseDTO getToDTO(ProfileEntity profileEntity) {
         ProfileRequestAndResponseDTO profileResponseDTO = new ProfileRequestAndResponseDTO();
-        profileResponseDTO.setId(profileEntity.getId());
         profileResponseDTO.setName(profileEntity.getName());
         profileResponseDTO.setSurname(profileEntity.getSurname());
         profileResponseDTO.setRole(profileEntity.getRole());
@@ -86,19 +86,15 @@ public class ProfileService {
         return profileResponseDTO;
     }
 
-    private ProfileEntity getProfileEntity(ProfileDTO proFileDTO) {
+    private ProfileEntity getProfileEntity(CreateProfileDTO createProfileDTO) {
         ProfileEntity entity = new ProfileEntity();
-        entity.setName(proFileDTO.getName());
-        entity.setPhone(proFileDTO.getPhone());
-        entity.setSurname(proFileDTO.getSurname());
-        entity.setPassword(MDUtil.encode(proFileDTO.getPassword()));
-        entity.setRole(proFileDTO.getRole());
-        entity.setStatus(ProfileStatus.ACTIVE);
+        entity.setName(createProfileDTO.getName());
+        entity.setPhone(createProfileDTO.getPhone());
+        entity.setSurname(createProfileDTO.getSurname());
+        entity.setPassword(MDUtil.encode(createProfileDTO.getPassword()));
+        entity.setRole(createProfileDTO.getRole());
         entity.setVisible(true);
         entity.setCreatedDate(LocalDateTime.now());
-        if (proFileDTO.getPhoto() != null) {
-            entity.setPhotoId(proFileDTO.getPhoto());
-        }
         return entity;
     }
 

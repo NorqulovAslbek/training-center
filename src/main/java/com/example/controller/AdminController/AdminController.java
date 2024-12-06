@@ -1,5 +1,6 @@
 package com.example.controller.AdminController;
 
+import com.example.dto.CreateProfileDTO;
 import com.example.dto.ProfileDTO;
 import com.example.dto.ProfileRequestAndResponseDTO;
 import com.example.service.ProfileService;
@@ -19,8 +20,8 @@ public class AdminController {
     @PostMapping("/create")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "bu api admin tomonidan profile qo'shish uchun ishlatiladi.", description = "admin tomonidan profile qo'shish")
-    public ResponseEntity<?> create(@RequestBody ProfileDTO proFileDTO) {
-        return ResponseEntity.ok(profileService.create(proFileDTO));
+    public ResponseEntity<?> create(@RequestBody CreateProfileDTO createProfileDTO) {
+        return ResponseEntity.ok(profileService.create(createProfileDTO));
     }
 
     @PutMapping("/update/{id}")

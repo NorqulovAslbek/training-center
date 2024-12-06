@@ -1,6 +1,5 @@
 package com.example.repository;
 
-import com.example.dto.ProfileRequestAndResponseDTO;
 import com.example.entity.ProfileEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
