@@ -1,0 +1,30 @@
+###  grouppa qoshish uchun
+POST localhost:8080/api/v1/group/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+{
+  "name": "G29",
+  "description": "bu java boyicha ochilgan grouppa",
+  "teacherId": 4
+}
+
+### update group
+PUT localhost:8080/api/v1/group/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+{
+  "description": "sda"
+}
+
+### delete by id
+DELETE localhost:8080/api/v1/group/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+
+### get all
+GET localhost:8080/api/v1/group/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg

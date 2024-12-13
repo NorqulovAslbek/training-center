@@ -1,0 +1,34 @@
+### create
+POST localhost:8080/api/v1/student/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+{
+  "name": "Axror",
+  "surname": "Saidov",
+  "phone": "+998930084847",
+  "groupId": 4,
+  "parentPhone": "+998991232345"
+}
+
+### update
+PUT localhost:8080/api/v1/student/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+{
+  "name": "Axror",
+  "surname": "Saidovs",
+  "phone": "+998930084847",
+  "groupId": 4,
+  "parentPhone": "+998991232345"
+}
+
+### delete
+DELETE localhost:8080/api/v1/student/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
+
+
+###
+GET localhost:8080/api/v1/student/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg

@@ -11,6 +11,7 @@ import com.example.repository.ProfileFilterRepository;
 import com.example.repository.ProfileRepository;
 import com.example.util.MDUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -23,11 +24,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class ProfileService {
-
-    private final ProfileRepository profileRepository;
-    private final ProfileFilterRepository profileFilterRepository;
+    @Autowired
+    private ProfileRepository profileRepository;
+    @Autowired
+    private ProfileFilterRepository profileFilterRepository;
 
     public ProfileRequestAndResponseDTO create(CreateProfileDTO createProfileDTO) {
         ProfileEntity entity = getProfileEntity(createProfileDTO);
@@ -66,7 +67,7 @@ public class ProfileService {
 
     public List<ProfileRequestAndResponseDTO> getList() {
         List<ProfileEntity> all = profileRepository.getByProfileList();
-        if (all.isEmpty()){
+        if (all.isEmpty()) {
             throw new AppBadException("profile not found");
         }
         List<ProfileRequestAndResponseDTO> profileList = new LinkedList<>();
@@ -79,6 +80,7 @@ public class ProfileService {
 
     private ProfileRequestAndResponseDTO getToDTO(ProfileEntity profileEntity) {
         ProfileRequestAndResponseDTO profileResponseDTO = new ProfileRequestAndResponseDTO();
+        profileResponseDTO.setId(profileEntity.getId());
         profileResponseDTO.setName(profileEntity.getName());
         profileResponseDTO.setSurname(profileEntity.getSurname());
         profileResponseDTO.setRole(profileEntity.getRole());

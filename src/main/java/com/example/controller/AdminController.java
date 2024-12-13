@@ -1,4 +1,4 @@
-package com.example.controller.AdminController;
+package com.example.controller;
 
 import com.example.dto.CreateProfileDTO;
 import com.example.dto.ProfileDTO;
@@ -6,16 +6,17 @@ import com.example.dto.ProfileRequestAndResponseDTO;
 import com.example.service.ProfileService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/admin")
-@RequiredArgsConstructor
-public class AdminController {
 
-    private final ProfileService profileService;
+public class AdminController {
+    @Autowired
+    private ProfileService profileService;
 
     @PostMapping("/create")
     @PreAuthorize("hasRole('ADMIN')")
@@ -34,21 +35,21 @@ public class AdminController {
 
     @DeleteMapping("/delete/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "bu api admin tomonidan profile ni o'chirish uchun ishlatiladi.",description = " admin tomonidan profile ni o'chirish")
+    @Operation(summary = "bu api admin tomonidan profile ni o'chirish uchun ishlatiladi.", description = " admin tomonidan profile ni o'chirish")
     public ResponseEntity<?> delete(@PathVariable("id") Integer id) {
         return ResponseEntity.ok(profileService.delete(id));
     }
 
     @GetMapping("/list")
     @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "admin uchun api yani profilelar listini ko'rish uchun ishlatiladi",description = "profilelar listini ko'rish")
+    @Operation(summary = "admin uchun api yani profilelar listini ko'rish uchun ishlatiladi", description = "profilelar listini ko'rish")
     public ResponseEntity<?> getList() {
         return ResponseEntity.ok(profileService.getList());
     }
 
     @PostMapping("/filter")
     @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "admin uchun profilelar listini sortlab ko'rish uchun pagenation qilib ko'rish uchun",description = "profilelar listini sortlab ko'rish uchun pagenation qilib ko'rish uchun")
+    @Operation(summary = "admin uchun profilelar listini sortlab ko'rish uchun pagenation qilib ko'rish uchun", description = "profilelar listini sortlab ko'rish uchun pagenation qilib ko'rish uchun")
     public ResponseEntity<?> filterAndPagination(@RequestBody ProfileRequestAndResponseDTO dto
             , @RequestParam("page") Integer page
             , @RequestParam("size") Integer size) {

@@ -2,6 +2,7 @@ package com.example.config;
 
 import com.example.util.MDUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -18,12 +19,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableMethodSecurity()
-@RequiredArgsConstructor
 public class SpringSecurityConfig {
-
-    private final UserDetailsService userDetailsService;
-
-    private final JwtTokenFilter jwtTokenFilter;
+    @Autowired
+    private UserDetailsService userDetailsService;
+    @Autowired
+    private JwtTokenFilter jwtTokenFilter;
 
     public static final String[] AUTH_WHITELIST = {
             "/v2/api-docs",

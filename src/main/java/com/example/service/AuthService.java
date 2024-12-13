@@ -8,14 +8,15 @@ import com.example.repository.ProfileRepository;
 import com.example.util.JWTUtil;
 import com.example.util.MDUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class AuthService {
-    private final ProfileRepository profileRepository;
+    @Autowired
+    private ProfileRepository profileRepository;
 
     public ProfileDTO login(AuthDTO authDTO) {
         Optional<ProfileEntity> optional = profileRepository.login(authDTO.getPhone(), MDUtil.encode(authDTO.getPassword()));

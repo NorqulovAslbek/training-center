@@ -19,6 +19,6 @@ public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer>
     @Query(value = "SELECT * FROM profile WHERE id = ?1 AND visible = true AND status = 'ACTIVE'", nativeQuery = true)
     Optional<ProfileEntity> profileById(Integer id);
 
-    @Query("FROM ProfileEntity AS P WHERE P.role <>'ROLE_ADMIN'")
+    @Query("FROM ProfileEntity AS P WHERE P.role <>'ROLE_ADMIN' and P.role='ROLE_TEACHER'")
     List<ProfileEntity> getByProfileList();
 }

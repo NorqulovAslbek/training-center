@@ -1,14 +1,14 @@
 ###
 POST localhost:8080/api/v1/admin/create
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NDk2NDksInBob25lIjoiKzk5ODk5MTIyMTIwMiIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MjM2MzYwNDksImlzcyI6IllvdXR1YmUifQ.Vv6U5Y9Gj0luSc6d413PQzRO0e2ZDCC2wk2fX0l4elYCdzmOFhgQR6kcp9H7TVSXhxZzLhRJmodnUVFrw6_bdQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzQwMDM4NjYsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM1MDQzMDk1LCJpc3MiOiJZb3V0dWJlIn0.3UT9CdfhhEGUPnuZb1E-FF-OSapBnmyavIC8cCwZLXdx3p-4Gbq44WP4Slj--g5_zJn1xSLmT6ds2EN6uLKTKg
 
 {
-  "name": "Aslbek",
-  "surname": "Norqulov",
-  "phone": "+998991221202",
+  "name": "techer",
+  "surname": "teacher",
+  "phone": "+998993331122",
   "password": "12345",
-  "role": "ROLE_USER"
+  "role": "ROLE_TEACHER"
 }
 
 ###
@@ -23,12 +23,12 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjM1NTI5OTIsInBob25lIjoiK
 ###
 GET localhost:8080/api/v1/admin/list
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjQ2MTI2MDAsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzI0Njk5MDAwLCJpc3MiOiJZb3V0dWJlIn0.uvDFbmh_ZLJR8egDDiHbN8VdDmqTI2X2EI-NGXzzZfRx4fn4WNFD9ZfvBrcHMB27KFSxYFQZb2UyTHySBxWv1w
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzM5NDA4NjIsInBob25lIjoiKzk5ODk5MTIyMTIwMiIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MzQ5ODAwOTEsImlzcyI6IllvdXR1YmUifQ.LwxHsvV3G4r8rxIlCMD0rrcHWbPNde_ft89cstf94ESzy0iUDorcJE-zCJoj5xlzy8tz4AGWPahEdqNq8zKLOA
 
 ###
 GET localhost:8080/api/v1/admin/list
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjQ2MTI2MDAsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzI0Njk5MDAwLCJpc3MiOiJZb3V0dWJlIn0.uvDFbmh_ZLJR8egDDiHbN8VdDmqTI2X2EI-NGXzzZfRx4fn4WNFD9ZfvBrcHMB27KFSxYFQZb2UyTHySBxWv1w
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MzM5NDEwMzQsInBob25lIjoiKzk5ODk5MTIwNTU3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzM0OTgwMjYyLCJpc3MiOiJZb3V0dWJlIn0.3v6_KsWSeHa2evM_zOQIIvuW4Zg7hJzVCrlz4eHryu4puXavqovxE_3UjP2GFViXBSq_ZhZXwQEnof3FmWEq-w
 
 
 ###
